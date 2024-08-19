@@ -1,0 +1,39 @@
+{
+    "name": "be-lenka/sap_purchase-order",
+    "description": "This service enables you to create purchase orders through an API call from a source system outside SAP S/4HANA Cloud. Furthermore, the service enables you to read, update or delete existing purchase orders from the SAP S/4HANA Cloud system. The service is based on the OData protocol.",
+    "keywords": [
+        "openapitools",
+        "openapi-generator",
+        "openapi",
+        "php",
+        "sdk",
+        "rest",
+        "api"
+    ],
+    "homepage": "https://openapi-generator.tech",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "BeLenka Dev",
+            "homepage": "https://www.belenka.com"
+        }
+    ],
+    "require": {
+"php": ">=7.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+"guzzlehttp/guzzle": "^6.2 || ^7.0"
+ 
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "friendsofphp/php-cs-fixer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": { "BeLenka\\SAP\\PurchaseOrder\\" : "lib/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "BeLenka\\SAP\\PurchaseOrder\\Test\\" : "test/" }
+    }
+}
