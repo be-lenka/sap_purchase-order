@@ -323,9 +323,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderScheduleLineType im
         'route_schedule' => 'setRouteSchedule',
         'product_availability_time' => 'setProductAvailabilityTime',
         'sap__messages' => 'setSapMessages',
-        '_purchase_order' => 'setPurchaseOrder',
-        '_purchase_order_item' => 'setPurchaseOrderItem',
-        '_subcontracting_component' => 'setSubcontractingComponent'
+        '_purchase_order' => '_setPurchaseOrder',
+        '_purchase_order_item' => '_setPurchaseOrderItem',
+        '_subcontracting_component' => '_setSubcontractingComponent'
     ];
 
     /**
@@ -362,9 +362,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderScheduleLineType im
         'route_schedule' => 'getRouteSchedule',
         'product_availability_time' => 'getProductAvailabilityTime',
         'sap__messages' => 'getSapMessages',
-        '_purchase_order' => 'getPurchaseOrder',
-        '_purchase_order_item' => 'getPurchaseOrderItem',
-        '_subcontracting_component' => 'getSubcontractingComponent'
+        '_purchase_order' => '_getPurchaseOrder',
+        '_purchase_order_item' => '_getPurchaseOrderItem',
+        '_subcontracting_component' => '_getSubcontractingComponent'
     ];
 
     /**
@@ -1411,9 +1411,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderScheduleLineType im
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderType|null
      */
-    public function getPurchaseOrder()
+    public function _getPurchaseOrder()
     {
-        return $this->container['_purchase_order'];
+    return $this->container['_purchase_order'];
     }
 
     /**
@@ -1423,7 +1423,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderScheduleLineType im
      *
      * @return self
      */
-    public function setPurchaseOrder($_purchase_order)
+    public function _setPurchaseOrder($_purchase_order)
     {
         if (is_null($_purchase_order)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order cannot be null');
@@ -1438,9 +1438,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderScheduleLineType im
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemType|null
      */
-    public function getPurchaseOrderItem()
+    public function _getPurchaseOrderItem()
     {
-        return $this->container['_purchase_order_item'];
+    return $this->container['_purchase_order_item'];
     }
 
     /**
@@ -1450,7 +1450,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderScheduleLineType im
      *
      * @return self
      */
-    public function setPurchaseOrderItem($_purchase_order_item)
+    public function _setPurchaseOrderItem($_purchase_order_item)
     {
         if (is_null($_purchase_order_item)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order_item cannot be null');
@@ -1465,9 +1465,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderScheduleLineType im
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001POSubcontractingComponentType[]|null
      */
-    public function getSubcontractingComponent()
+    public function _getSubcontractingComponent()
     {
-        return $this->container['_subcontracting_component'];
+    return $this->container['_subcontracting_component'];
     }
 
     /**
@@ -1477,7 +1477,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderScheduleLineType im
      *
      * @return self
      */
-    public function setSubcontractingComponent($_subcontracting_component)
+    public function _setSubcontractingComponent($_subcontracting_component)
     {
         if (is_null($_subcontracting_component)) {
             throw new \InvalidArgumentException('non-nullable _subcontracting_component cannot be null');

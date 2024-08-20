@@ -462,10 +462,10 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate implemen
         'vat_registration_country' => 'setVatRegistrationCountry',
         'purchasing_collective_number' => 'setPurchasingCollectiveNumber',
         'sap__messages' => 'setSapMessages',
-        '_purchase_order_item' => 'setPurchaseOrderItem',
-        '_purchase_order_note' => 'setPurchaseOrderNote',
-        '_purchase_order_partner' => 'setPurchaseOrderPartner',
-        '_supplier_address' => 'setSupplierAddress'
+        '_purchase_order_item' => '_setPurchaseOrderItem',
+        '_purchase_order_note' => '_setPurchaseOrderNote',
+        '_purchase_order_partner' => '_setPurchaseOrderPartner',
+        '_supplier_address' => '_setSupplierAddress'
     ];
 
     /**
@@ -529,10 +529,10 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate implemen
         'vat_registration_country' => 'getVatRegistrationCountry',
         'purchasing_collective_number' => 'getPurchasingCollectiveNumber',
         'sap__messages' => 'getSapMessages',
-        '_purchase_order_item' => 'getPurchaseOrderItem',
-        '_purchase_order_note' => 'getPurchaseOrderNote',
-        '_purchase_order_partner' => 'getPurchaseOrderPartner',
-        '_supplier_address' => 'getSupplierAddress'
+        '_purchase_order_item' => '_getPurchaseOrderItem',
+        '_purchase_order_note' => '_getPurchaseOrderNote',
+        '_purchase_order_partner' => '_getPurchaseOrderPartner',
+        '_supplier_address' => '_getSupplierAddress'
     ];
 
     /**
@@ -2525,9 +2525,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate implemen
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate[]|null
      */
-    public function getPurchaseOrderItem()
+    public function _getPurchaseOrderItem()
     {
-        return $this->container['_purchase_order_item'];
+    return $this->container['_purchase_order_item'];
     }
 
     /**
@@ -2537,7 +2537,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate implemen
      *
      * @return self
      */
-    public function setPurchaseOrderItem($_purchase_order_item)
+    public function _setPurchaseOrderItem($_purchase_order_item)
     {
         if (is_null($_purchase_order_item)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order_item cannot be null');
@@ -2552,9 +2552,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate implemen
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderNoteTypeCreate[]|null
      */
-    public function getPurchaseOrderNote()
+    public function _getPurchaseOrderNote()
     {
-        return $this->container['_purchase_order_note'];
+    return $this->container['_purchase_order_note'];
     }
 
     /**
@@ -2564,7 +2564,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate implemen
      *
      * @return self
      */
-    public function setPurchaseOrderNote($_purchase_order_note)
+    public function _setPurchaseOrderNote($_purchase_order_note)
     {
         if (is_null($_purchase_order_note)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order_note cannot be null');
@@ -2579,9 +2579,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate implemen
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderPartnerTypeCreate[]|null
      */
-    public function getPurchaseOrderPartner()
+    public function _getPurchaseOrderPartner()
     {
-        return $this->container['_purchase_order_partner'];
+    return $this->container['_purchase_order_partner'];
     }
 
     /**
@@ -2591,7 +2591,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate implemen
      *
      * @return self
      */
-    public function setPurchaseOrderPartner($_purchase_order_partner)
+    public function _setPurchaseOrderPartner($_purchase_order_partner)
     {
         if (is_null($_purchase_order_partner)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order_partner cannot be null');
@@ -2606,9 +2606,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate implemen
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderSupplierAddressTypeCreate|null
      */
-    public function getSupplierAddress()
+    public function _getSupplierAddress()
     {
-        return $this->container['_supplier_address'];
+    return $this->container['_supplier_address'];
     }
 
     /**
@@ -2618,7 +2618,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate implemen
      *
      * @return self
      */
-    public function setSupplierAddress($_supplier_address)
+    public function _setSupplierAddress($_supplier_address)
     {
         if (is_null($_supplier_address)) {
             throw new \InvalidArgumentException('non-nullable _supplier_address cannot be null');

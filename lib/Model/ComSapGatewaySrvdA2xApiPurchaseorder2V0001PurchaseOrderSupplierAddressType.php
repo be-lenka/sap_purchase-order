@@ -415,7 +415,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderSupplierAddressType
         'email_address' => 'setEmailAddress',
         'regional_structure_check_status' => 'setRegionalStructureCheckStatus',
         'sap__messages' => 'setSapMessages',
-        '_purchase_order_tp' => 'setPurchaseOrderTp'
+        '_purchase_order_tp' => '_setPurchaseOrderTp'
     ];
 
     /**
@@ -472,7 +472,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderSupplierAddressType
         'email_address' => 'getEmailAddress',
         'regional_structure_check_status' => 'getRegionalStructureCheckStatus',
         'sap__messages' => 'getSapMessages',
-        '_purchase_order_tp' => 'getPurchaseOrderTp'
+        '_purchase_order_tp' => '_getPurchaseOrderTp'
     ];
 
     /**
@@ -2294,9 +2294,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderSupplierAddressType
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderType|null
      */
-    public function getPurchaseOrderTp()
+    public function _getPurchaseOrderTp()
     {
-        return $this->container['_purchase_order_tp'];
+    return $this->container['_purchase_order_tp'];
     }
 
     /**
@@ -2306,7 +2306,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderSupplierAddressType
      *
      * @return self
      */
-    public function setPurchaseOrderTp($_purchase_order_tp)
+    public function _setPurchaseOrderTp($_purchase_order_tp)
     {
         if (is_null($_purchase_order_tp)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order_tp cannot be null');

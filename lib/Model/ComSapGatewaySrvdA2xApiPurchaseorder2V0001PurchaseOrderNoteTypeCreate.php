@@ -195,7 +195,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderNoteTypeCreate impl
         'text_object_type' => 'setTextObjectType',
         'language' => 'setLanguage',
         'plain_long_text' => 'setPlainLongText',
-        '_purchase_order' => 'setPurchaseOrder'
+        '_purchase_order' => '_setPurchaseOrder'
     ];
 
     /**
@@ -208,7 +208,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderNoteTypeCreate impl
         'text_object_type' => 'getTextObjectType',
         'language' => 'getLanguage',
         'plain_long_text' => 'getPlainLongText',
-        '_purchase_order' => 'getPurchaseOrder'
+        '_purchase_order' => '_getPurchaseOrder'
     ];
 
     /**
@@ -463,9 +463,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderNoteTypeCreate impl
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate|null
      */
-    public function getPurchaseOrder()
+    public function _getPurchaseOrder()
     {
-        return $this->container['_purchase_order'];
+    return $this->container['_purchase_order'];
     }
 
     /**
@@ -475,7 +475,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderNoteTypeCreate impl
      *
      * @return self
      */
-    public function setPurchaseOrder($_purchase_order)
+    public function _setPurchaseOrder($_purchase_order)
     {
         if (is_null($_purchase_order)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order cannot be null');

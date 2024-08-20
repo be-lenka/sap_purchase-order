@@ -23,7 +23,7 @@ if [ "$0" -eq "--help" ]; then
 fi
 
 mkdir -p resources
-docker run --user $(id -u):$(id -g) --rm -v ${PWD}:/local openapitools/openapi-generator-cli:v7.0.0 generate -t /local/resources -i /local/$1 -g php -o /local/ -p licenseName="MIT" -p developerOrganization="BeLenka Dev" -p developerOrganizationUrl="https://www.belenka.com" -p composerPackageName=be-lenka/sap_$2 -p invokerPackage=BeLenka\\SAP\\$3
+docker run --user $(id -u):$(id -g) --rm -v ${PWD}:/local openapitools/openapi-generator-cli:v7.0.0 generate -t /local/resources -i /local/$1 -g php -o /local/ -p licenseName="MIT" -p developerOrganization="BeLenka Dev" -p developerOrganizationUrl="https://www.belenka.com" -p composerPackageName=be-lenka/sap_$2 -p invokerPackage=BeLenka\\SAP\\$3 -p variableNamingConvention=original
 
 find "lib/" -type f -name '*.php' -print0 | while IFS= read -r -d '' file
 do
@@ -31,6 +31,7 @@ do
     sed -i 's/\\GuzzleHttp\\Utils::jsonEncode/json_encode/g' "$file"
     #sed -i "/\$resourcePath/s/'{/\\\\'{/g" "$file"
     #sed -i "/\$resourcePath/s/}'/}\\\'/g" "$file"
+    php fix.php $file
     echo "Replaced in: $file"
 done
 sed -i '/^\s*"php":/c\"php": ">=7.3",' composer.json

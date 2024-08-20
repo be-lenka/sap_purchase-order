@@ -424,8 +424,8 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurOrderItemDeliveryAddressType 
         'email_address' => 'setEmailAddress',
         'regional_structure_check_status' => 'setRegionalStructureCheckStatus',
         'sap__messages' => 'setSapMessages',
-        '_purchase_order' => 'setPurchaseOrder',
-        '_purchase_order_item' => 'setPurchaseOrderItem'
+        '_purchase_order' => '_setPurchaseOrder',
+        '_purchase_order_item' => '_setPurchaseOrderItem'
     ];
 
     /**
@@ -483,8 +483,8 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurOrderItemDeliveryAddressType 
         'email_address' => 'getEmailAddress',
         'regional_structure_check_status' => 'getRegionalStructureCheckStatus',
         'sap__messages' => 'getSapMessages',
-        '_purchase_order' => 'getPurchaseOrder',
-        '_purchase_order_item' => 'getPurchaseOrderItem'
+        '_purchase_order' => '_getPurchaseOrder',
+        '_purchase_order_item' => '_getPurchaseOrderItem'
     ];
 
     /**
@@ -2343,9 +2343,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurOrderItemDeliveryAddressType 
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderType|null
      */
-    public function getPurchaseOrder()
+    public function _getPurchaseOrder()
     {
-        return $this->container['_purchase_order'];
+    return $this->container['_purchase_order'];
     }
 
     /**
@@ -2355,7 +2355,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurOrderItemDeliveryAddressType 
      *
      * @return self
      */
-    public function setPurchaseOrder($_purchase_order)
+    public function _setPurchaseOrder($_purchase_order)
     {
         if (is_null($_purchase_order)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order cannot be null');
@@ -2370,9 +2370,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurOrderItemDeliveryAddressType 
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemType|null
      */
-    public function getPurchaseOrderItem()
+    public function _getPurchaseOrderItem()
     {
-        return $this->container['_purchase_order_item'];
+    return $this->container['_purchase_order_item'];
     }
 
     /**
@@ -2382,7 +2382,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurOrderItemDeliveryAddressType 
      *
      * @return self
      */
-    public function setPurchaseOrderItem($_purchase_order_item)
+    public function _setPurchaseOrderItem($_purchase_order_item)
     {
         if (is_null($_purchase_order_item)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order_item cannot be null');

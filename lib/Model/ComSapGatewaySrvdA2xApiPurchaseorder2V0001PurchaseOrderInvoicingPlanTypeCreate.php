@@ -243,9 +243,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderInvoicingPlanTypeCr
         'purchase_order_type' => 'setPurchaseOrderType',
         'plant' => 'setPlant',
         'sap__messages' => 'setSapMessages',
-        '_po_invoicing_plan_item' => 'setPoInvoicingPlanItem',
-        '_purchase_order' => 'setPurchaseOrder',
-        '_purchase_order_item' => 'setPurchaseOrderItem'
+        '_po_invoicing_plan_item' => '_setPoInvoicingPlanItem',
+        '_purchase_order' => '_setPurchaseOrder',
+        '_purchase_order_item' => '_setPurchaseOrderItem'
     ];
 
     /**
@@ -266,9 +266,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderInvoicingPlanTypeCr
         'purchase_order_type' => 'getPurchaseOrderType',
         'plant' => 'getPlant',
         'sap__messages' => 'getSapMessages',
-        '_po_invoicing_plan_item' => 'getPoInvoicingPlanItem',
-        '_purchase_order' => 'getPurchaseOrder',
-        '_purchase_order_item' => 'getPurchaseOrderItem'
+        '_po_invoicing_plan_item' => '_getPoInvoicingPlanItem',
+        '_purchase_order' => '_getPurchaseOrder',
+        '_purchase_order_item' => '_getPurchaseOrderItem'
     ];
 
     /**
@@ -811,9 +811,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderInvoicingPlanTypeCr
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001POInvoicingPlanItemTypeCreate[]|null
      */
-    public function getPoInvoicingPlanItem()
+    public function _getPoInvoicingPlanItem()
     {
-        return $this->container['_po_invoicing_plan_item'];
+    return $this->container['_po_invoicing_plan_item'];
     }
 
     /**
@@ -823,7 +823,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderInvoicingPlanTypeCr
      *
      * @return self
      */
-    public function setPoInvoicingPlanItem($_po_invoicing_plan_item)
+    public function _setPoInvoicingPlanItem($_po_invoicing_plan_item)
     {
         if (is_null($_po_invoicing_plan_item)) {
             throw new \InvalidArgumentException('non-nullable _po_invoicing_plan_item cannot be null');
@@ -838,9 +838,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderInvoicingPlanTypeCr
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate|null
      */
-    public function getPurchaseOrder()
+    public function _getPurchaseOrder()
     {
-        return $this->container['_purchase_order'];
+    return $this->container['_purchase_order'];
     }
 
     /**
@@ -850,7 +850,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderInvoicingPlanTypeCr
      *
      * @return self
      */
-    public function setPurchaseOrder($_purchase_order)
+    public function _setPurchaseOrder($_purchase_order)
     {
         if (is_null($_purchase_order)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order cannot be null');
@@ -865,9 +865,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderInvoicingPlanTypeCr
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate|null
      */
-    public function getPurchaseOrderItem()
+    public function _getPurchaseOrderItem()
     {
-        return $this->container['_purchase_order_item'];
+    return $this->container['_purchase_order_item'];
     }
 
     /**
@@ -877,7 +877,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderInvoicingPlanTypeCr
      *
      * @return self
      */
-    public function setPurchaseOrderItem($_purchase_order_item)
+    public function _setPurchaseOrderItem($_purchase_order_item)
     {
         if (is_null($_purchase_order_item)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order_item cannot be null');

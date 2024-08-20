@@ -989,13 +989,13 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
         'val_added_srvc_parent_itm_number' => 'setValAddedSrvcParentItmNumber',
         'stock_segment' => 'setStockSegment',
         'sap__messages' => 'setSapMessages',
-        '_delivery_address' => 'setDeliveryAddress',
-        '_purchase_order' => 'setPurchaseOrder',
-        '_purchase_order_invoicing_plan' => 'setPurchaseOrderInvoicingPlan',
-        '_purchase_order_item_note' => 'setPurchaseOrderItemNote',
-        '_purchase_order_schedule_line_tp' => 'setPurchaseOrderScheduleLineTp',
-        '_pur_ord_account_assignment' => 'setPurOrdAccountAssignment',
-        '_pur_ord_pricing_element' => 'setPurOrdPricingElement'
+        '_delivery_address' => '_setDeliveryAddress',
+        '_purchase_order' => '_setPurchaseOrder',
+        '_purchase_order_invoicing_plan' => '_setPurchaseOrderInvoicingPlan',
+        '_purchase_order_item_note' => '_setPurchaseOrderItemNote',
+        '_purchase_order_schedule_line_tp' => '_setPurchaseOrderScheduleLineTp',
+        '_pur_ord_account_assignment' => '_setPurOrdAccountAssignment',
+        '_pur_ord_pricing_element' => '_setPurOrdPricingElement'
     ];
 
     /**
@@ -1162,13 +1162,13 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
         'val_added_srvc_parent_itm_number' => 'getValAddedSrvcParentItmNumber',
         'stock_segment' => 'getStockSegment',
         'sap__messages' => 'getSapMessages',
-        '_delivery_address' => 'getDeliveryAddress',
-        '_purchase_order' => 'getPurchaseOrder',
-        '_purchase_order_invoicing_plan' => 'getPurchaseOrderInvoicingPlan',
-        '_purchase_order_item_note' => 'getPurchaseOrderItemNote',
-        '_purchase_order_schedule_line_tp' => 'getPurchaseOrderScheduleLineTp',
-        '_pur_ord_account_assignment' => 'getPurOrdAccountAssignment',
-        '_pur_ord_pricing_element' => 'getPurOrdPricingElement'
+        '_delivery_address' => '_getDeliveryAddress',
+        '_purchase_order' => '_getPurchaseOrder',
+        '_purchase_order_invoicing_plan' => '_getPurchaseOrderInvoicingPlan',
+        '_purchase_order_item_note' => '_getPurchaseOrderItemNote',
+        '_purchase_order_schedule_line_tp' => '_getPurchaseOrderScheduleLineTp',
+        '_pur_ord_account_assignment' => '_getPurOrdAccountAssignment',
+        '_pur_ord_pricing_element' => '_getPurOrdPricingElement'
     ];
 
     /**
@@ -6585,9 +6585,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurOrderItemDeliveryAddressTypeCreate|null
      */
-    public function getDeliveryAddress()
+    public function _getDeliveryAddress()
     {
-        return $this->container['_delivery_address'];
+    return $this->container['_delivery_address'];
     }
 
     /**
@@ -6597,7 +6597,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return self
      */
-    public function setDeliveryAddress($_delivery_address)
+    public function _setDeliveryAddress($_delivery_address)
     {
         if (is_null($_delivery_address)) {
             throw new \InvalidArgumentException('non-nullable _delivery_address cannot be null');
@@ -6612,9 +6612,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderTypeCreate|null
      */
-    public function getPurchaseOrder()
+    public function _getPurchaseOrder()
     {
-        return $this->container['_purchase_order'];
+    return $this->container['_purchase_order'];
     }
 
     /**
@@ -6624,7 +6624,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return self
      */
-    public function setPurchaseOrder($_purchase_order)
+    public function _setPurchaseOrder($_purchase_order)
     {
         if (is_null($_purchase_order)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order cannot be null');
@@ -6639,9 +6639,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderInvoicingPlanTypeCreate[]|null
      */
-    public function getPurchaseOrderInvoicingPlan()
+    public function _getPurchaseOrderInvoicingPlan()
     {
-        return $this->container['_purchase_order_invoicing_plan'];
+    return $this->container['_purchase_order_invoicing_plan'];
     }
 
     /**
@@ -6651,7 +6651,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return self
      */
-    public function setPurchaseOrderInvoicingPlan($_purchase_order_invoicing_plan)
+    public function _setPurchaseOrderInvoicingPlan($_purchase_order_invoicing_plan)
     {
         if (is_null($_purchase_order_invoicing_plan)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order_invoicing_plan cannot be null');
@@ -6666,9 +6666,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemNoteTypeCreate[]|null
      */
-    public function getPurchaseOrderItemNote()
+    public function _getPurchaseOrderItemNote()
     {
-        return $this->container['_purchase_order_item_note'];
+    return $this->container['_purchase_order_item_note'];
     }
 
     /**
@@ -6678,7 +6678,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return self
      */
-    public function setPurchaseOrderItemNote($_purchase_order_item_note)
+    public function _setPurchaseOrderItemNote($_purchase_order_item_note)
     {
         if (is_null($_purchase_order_item_note)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order_item_note cannot be null');
@@ -6693,9 +6693,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderScheduleLineTypeCreate[]|null
      */
-    public function getPurchaseOrderScheduleLineTp()
+    public function _getPurchaseOrderScheduleLineTp()
     {
-        return $this->container['_purchase_order_schedule_line_tp'];
+    return $this->container['_purchase_order_schedule_line_tp'];
     }
 
     /**
@@ -6705,7 +6705,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return self
      */
-    public function setPurchaseOrderScheduleLineTp($_purchase_order_schedule_line_tp)
+    public function _setPurchaseOrderScheduleLineTp($_purchase_order_schedule_line_tp)
     {
         if (is_null($_purchase_order_schedule_line_tp)) {
             throw new \InvalidArgumentException('non-nullable _purchase_order_schedule_line_tp cannot be null');
@@ -6720,9 +6720,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderAccountAssignmentTypeCreate[]|null
      */
-    public function getPurOrdAccountAssignment()
+    public function _getPurOrdAccountAssignment()
     {
-        return $this->container['_pur_ord_account_assignment'];
+    return $this->container['_pur_ord_account_assignment'];
     }
 
     /**
@@ -6732,7 +6732,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return self
      */
-    public function setPurOrdAccountAssignment($_pur_ord_account_assignment)
+    public function _setPurOrdAccountAssignment($_pur_ord_account_assignment)
     {
         if (is_null($_pur_ord_account_assignment)) {
             throw new \InvalidArgumentException('non-nullable _pur_ord_account_assignment cannot be null');
@@ -6747,9 +6747,9 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return \BeLenka\SAP\PurchaseOrder\Model\ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurOrderItemPricingElementTypeCreate[]|null
      */
-    public function getPurOrdPricingElement()
+    public function _getPurOrdPricingElement()
     {
-        return $this->container['_pur_ord_pricing_element'];
+    return $this->container['_pur_ord_pricing_element'];
     }
 
     /**
@@ -6759,7 +6759,7 @@ class ComSapGatewaySrvdA2xApiPurchaseorder2V0001PurchaseOrderItemTypeCreate impl
      *
      * @return self
      */
-    public function setPurOrdPricingElement($_pur_ord_pricing_element)
+    public function _setPurOrdPricingElement($_pur_ord_pricing_element)
     {
         if (is_null($_pur_ord_pricing_element)) {
             throw new \InvalidArgumentException('non-nullable _pur_ord_pricing_element cannot be null');
